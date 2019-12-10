@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
     public void git(View v)
     {
         Intent i = new Intent(this, github_act.class);
-        String[] listaLibrosG = new String[]{"Farenheit", "Revival", "El alquimista"};
-        int[] listaCostosG = new int[]{5000, 12000, 45000};
+        String[] listaLibrosG = new String[]{"Farenheit", "Revival", "El alquimista","El poder","Despertar"};
+        int[] listaCostosG = new int[]{7000, 22000, 45000,88000,156000};
         i.putExtra("ListaNombresLibros", listaLibrosG);
         i.putExtra("ListaCostosLibros", listaCostosG);
         startActivity(i);
