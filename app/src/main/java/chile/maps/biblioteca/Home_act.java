@@ -65,4 +65,5 @@ public class Home_act extends AppCompatActivity {
         startActivity(i);
     }
 
+
 }

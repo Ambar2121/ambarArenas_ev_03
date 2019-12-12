@@ -2,6 +2,7 @@ package chile.maps.biblioteca;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -61,6 +62,11 @@ public class Libros_Act extends AppCompatActivity {
             int total = ((valorTesla*stock)+costoPrestamo);
             tvUno.setText("Stock disponible: "+ stock + "El costo total es: "+ total);
         }
+    }
+    public void Mqtt(View v)
+    {
+        Intent i = new Intent(this, Mqtt_act.class);
+        startActivity(i);
     }
 
 }
