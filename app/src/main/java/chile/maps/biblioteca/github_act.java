@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -12,6 +13,7 @@ public class github_act extends AppCompatActivity {
 
     private Spinner spUno;
     private TextView tvUno;
+    private Button btnUno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +21,17 @@ public class github_act extends AppCompatActivity {
         setContentView(R.layout.activity_github_act);
         spUno = findViewById(R.id.spn1);
         tvUno = findViewById(R.id.tv1);
+        btnUno = findViewById(R.id.btn);
         Bundle b = this.getIntent().getExtras();
         String[] datos = b.getStringArray("ListaNombresLibros");
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,datos);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spUno.setAdapter(adapter);
-        mostrar();
+
 
     }
 
-    public void mostrar(){
+    public void mostrar(View view){
         Bundle b = this.getIntent().getExtras();
         int[] datos1 = b.getIntArray("ListaCostosLibros");
         int valorFarenheit = datos1[0];
